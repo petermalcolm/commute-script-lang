@@ -1,0 +1,25 @@
+{
+    "name": "commute-script-lang",
+    "displayName": "commute-script-lang",
+    "description": "Commute Script Syntax Highlighting",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.52.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "cosc",
+            "aliases": ["Commute Script", "cosc"],
+            "extensions": [".cosc"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "cosc",
+            "scopeName": "source.cosc",
+            "path": "./syntaxes/cosc.tmLanguage.json"
+        }]
+    }
+}
