@@ -7,14 +7,45 @@
 		},
 		{
 			"include": "#strings"
+		},
+		{
+			"include": "#comments"
+		},
+		{
+			"include": "#variables"
+		},
+		{
+			"include": "#numbers"
+		},
+		{
+			"include": "#bools"
+		},
+		{
+			"include": "#lists"
+		},
+		{
+			"include": "#functions"
+		},
+		{
+			"include": "#tab"
 		}
 	],
 	"repository": {
-		"keywords": {
+		"comments": {
+			"name": "comment.line.cosc",
+			"begin": "\\|",
+			"end": "\\|",
 			"patterns": [{
-				"name": "keyword.control.cosc",
-				"match": "\\b(if|while|for|return)\\b"
+				"match": "\\\\."
 			}]
+		},
+		"keywords": {
+			"patterns": [
+				{
+					"name": "keyword.control.cosc",
+					"match": "\\[(tools|page|event|pure)[^\\[]*\\]"
+				}
+			]
 		},
 		"strings": {
 			"name": "string.quoted.double.cosc",
@@ -26,7 +57,59 @@
 					"match": "\\\\."
 				}
 			]
+		},
+		"variables": {
+			"name": "variable.name.cosc",
+			"begin": "\\'",
+			"end": "\\'",
+			"patterns": [
+				{
+					"name": "constant.character.escape.cosc",
+					"match": "\\\\."
+				}
+			]
+		},
+		"numbers": {
+			"patterns": [
+				{
+					"name": "constant.numeric.cosc",
+					"match": "\\(\\d+\\)"
+				}
+			]
+		},
+		"bools": {
+			"patterns": [
+				{
+					"name": "expr.boolean.cosc",
+					"match": "\\<[^\\>]+\\{[>=<]\\}[^\\>]+\\>"
+				}
+			]
+		},
+		"lists": {
+			"patterns": [
+				{
+					"name": "list.cosc",
+					"match": "^\\#(([^\\,]+\\,)*[^\\,]+)?\\#"
+				}
+			]
+		},
+		"functions":{
+			"patterns": [
+				{
+					"name": "support.function.cosc",
+					"match": "\\~[^~]+\\~"
+				}
+			]
+		},
+		"tab":{
+			"patterns": [
+				{
+					"name": "constant.character.escape.cosc",
+					"match": "\\~ (\\\\.) \\~"
+				}
+			]
 		}
+
 	},
 	"scopeName": "source.cosc"
 }

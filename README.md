@@ -1,6 +1,6 @@
-# commute-script-lang README
+# CommuteScript Language Extension
 
-This is the README for your extension "commute-script-lang". After writing up a brief description, we recommend including the following sections.
+This is the README for the extension "commute-script-lang". The CommuteScript language is commutative and fun.
 
 ## Features
 
