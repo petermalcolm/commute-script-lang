@@ -4,6 +4,10 @@
     "description": "Commute Script Syntax Highlighting",
     "version": "0.0.1",
     "publisher": "SyntaxLight",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/petermalcolm/commute-script-lang.git"
+    },
     "engines": {
         "vscode": "^1.52.0"
     },
